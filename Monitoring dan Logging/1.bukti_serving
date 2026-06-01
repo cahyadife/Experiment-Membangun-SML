@@ -1,1 +1,14 @@
-Proof of serving model placeholder file.
+Proof of MLflow Model Serving
+
+Tahapan serving model menggunakan MLflow dapat dilakukan dengan perintah:
+
+mlflow models serve -m <model_uri> --port 5000
+
+Model serving endpoint akan tersedia di: http://127.0.0.1:5000
+
+Alternatif: Menggunakan Docker image yang telah dibuat di tahap Workflow CI:
+docker run -p 5000:8080 cahyadica/eksperimen_sml:latest
+
+Port mapping Docker akan membuat model tersedia di: http://127.0.0.1:5000
+
+Status: Siap untuk serving (detailed screenshot dapat dilihat pada monitoring evidence)
