@@ -1,1 +1,8 @@
+Repository URL (Kriteria 3 - Workflow CI):
 https://github.com/cahyadica/Eksperimen_SML_Cahyadi
+
+Deskripsi: Repository ini berisi MLflow Project dan GitHub Actions workflow untuk CI/CD.
+Workflow memungkinkan retraining model secara otomatis dan build Docker image ke Docker Hub.
+
+Docker Hub Image: https://hub.docker.com/r/cahyadica/eksperimen_sml
+Branch: master
