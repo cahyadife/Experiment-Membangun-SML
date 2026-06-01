@@ -1,0 +1,5 @@
+pandas
+mlflow
+scikit-learn
+matplotlib
+requests

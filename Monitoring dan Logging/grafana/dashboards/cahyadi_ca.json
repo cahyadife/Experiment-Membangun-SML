@@ -1,0 +1,132 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "#999999",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 0,"y": 0},
+      "id": 1,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_requests_total","legendFormat": "requests total","refId": "A"}],
+      "title": "Total Request Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 12,"y": 0},
+      "id": 2,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "histogram_quantile(0.95, sum(rate(ml_model_request_latency_seconds_bucket[5m])) by (le))","legendFormat": "95th percentile latency","refId": "A"}],
+      "title": "Request Latency (95th Percentile)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 0,"y": 8},
+      "id": 3,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_request_errors_total","legendFormat": "request errors total","refId": "A"}],
+      "title": "Request Error Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 12,"y": 8},
+      "id": 4,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_active_requests","legendFormat": "active requests","refId": "A"}],
+      "title": "Active Requests",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 0,"y": 16},
+      "id": 5,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_prediction_value","legendFormat": "last prediction","refId": "A"}],
+      "title": "Last Prediction Value",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 12,"y": 16},
+      "id": 6,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_input_year","legendFormat": "input year","refId": "A"}],
+      "title": "Last Input Year",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 0,"y": 24},
+      "id": 7,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_prediction_sum","legendFormat": "prediction sum","refId": "A"}],
+      "title": "Prediction Sum",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 12,"y": 24},
+      "id": 8,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_prediction_count","legendFormat": "prediction count","refId": "A"}],
+      "title": "Prediction Count",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 0,"y": 32},
+      "id": 9,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_prediction_average","legendFormat": "prediction average","refId": "A"}],
+      "title": "Prediction Average",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {"defaults": {},"overrides": []},
+      "gridPos": {"h": 8,"w": 12,"x": 12,"y": 32},
+      "id": 10,
+      "options": {"legend": {"displayMode": "list","placement": "bottom"}},
+      "targets": [{"expr": "ml_model_prediction_min","legendFormat": "prediction min","refId": "A"},{"expr": "ml_model_prediction_max","legendFormat": "prediction max","refId": "B"}],
+      "title": "Prediction Min / Max",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 36,
+  "style": "dark",
+  "tags": [],
+  "templating": {"list": []},
+  "time": {"from": "now-1h","to": "now"},
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "cahyadi_ca",
+  "version": 1
+}
