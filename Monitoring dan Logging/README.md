@@ -4,17 +4,35 @@ Folder ini berisi konfigurasi dasar untuk serving model, Prometheus monitoring, 
 
 ## Isi folder
 
-- `1.bukti_serving` : placeholder bukti serving model
+- `1.bukti_serving` : bukti serving model MLflow pada port 5700
 - `2.prometheus.yml` : konfigurasi Prometheus
 - `3.prometheus_exporter.py` : exporter Python untuk expose metriks model
-- `4.bukti monitoring Prometheus/` : placeholder bukti monitoring Prometheus
-- `5.bukti monitoring Grafana/` : placeholder bukti monitoring Grafana
-- `6.bukti alerting Grafana/` : placeholder bukti alerting Grafana
+- `4.bukti monitoring Prometheus/` : bukti monitoring Prometheus
+- `5.bukti monitoring Grafana/` : bukti monitoring Grafana
+- `6.bukti alerting Grafana/` : bukti alerting Grafana
 - `7.inference.py` : script inferensi model dari artefak MLflow
 - `Dockerfile` : image container untuk exporter dan inferensi
 - `docker-compose.yml` : stack Prometheus + Grafana + exporter
 - `requirements.txt` : dependensi Python
-- `grafana/` : provisioning Grafana dashboard "cahyadi_ca"
+- `grafana/` : provisioning Grafana dashboard "dashboard-cahyadi"
+
+## Prometheus metrics yang diekspos
+
+Metrik utama yang diekspos oleh exporter:
+
+- `ml_model_requests_total`
+- `ml_model_request_errors_total`
+- `ml_model_request_latency_seconds_bucket`
+- `ml_model_active_requests`
+- `ml_model_prediction_value`
+- `ml_model_input_year`
+- `ml_model_prediction_sum`
+- `ml_model_prediction_count`
+- `ml_model_prediction_average`
+- `ml_model_prediction_min`
+- `ml_model_prediction_max`
+
+Prometheus dapat memuat metrik ini di `http://localhost:5800`.
 
 ## Cara menjalankan
 
@@ -26,8 +44,8 @@ python -m pip install -r requirements.txt
 python 3.prometheus_exporter.py
 ```
 
-3. Buka Prometheus di `http://localhost:9090`
-4. Buka Grafana di `http://localhost:3000` (admin/admin)
+3. Buka Prometheus di `http://localhost:5800`
+4. Buka Grafana di `http://localhost:5890` (admin/admin)
 
 ## Docker Compose
 
@@ -35,7 +53,18 @@ python 3.prometheus_exporter.py
 docker compose up --build
 ```
 
-Grafana akan otomatis memuat dashboard `cahyadi_ca`.
+Grafana akan otomatis memuat dashboard `dashboard-cahyadi`.
+
+Pastikan screenshot Grafana menampilkan nama dashboard `dashboard-cahyadi` yang berisi username Dicoding.
+
+Bukti Prometheus dan Grafana bisa ditaruh di folder:
+
+- `4.bukti monitoring Prometheus/`
+- `5.bukti monitoring Grafana/`
+- `6.bukti alerting Grafana/`
+- `Monitoring dan Logging/serving_screenshot_5700.png`
+
+Panduan bukti tambahan tersedia di `prometheus_grafana_evidence.md`.
 
 ## Alerting
 
@@ -46,4 +75,4 @@ Aturan alert yang tersedia:
 - `ModelErrorRate`
 - `HighActiveRequests`
 
-Untuk menampilkan alert di Grafana, buka menu Alerting lalu gunakan dashboard `cahyadi_ca`.
+Untuk menampilkan alert di Grafana, buka menu Alerting lalu gunakan dashboard `dashboard-cahyadi`.

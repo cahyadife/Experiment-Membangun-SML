@@ -43,7 +43,7 @@ class PredictionHandler(BaseHTTPRequestHandler):
             year = int(year_values[0])
             prediction = self.server.model.predict([[year]])[0]
 
-            LAST_PREDIction.set(prediction)
+            LAST_PREDiction.set(prediction)
             INPUT_YEAR.set(year)
             self.server.total_predictions += 1
             self.server.prediction_sum += prediction
@@ -93,15 +93,17 @@ class MetricsHTTPServer(HTTPServer):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Prometheus exporter untuk model MLflow.')
-    parser.add_argument('--model-path', type=str, default='../mlruns/1/models/m-8fdf8f8531774850aa0b02bc95e03cb3/artifacts')
-    parser.add_argument('--port', type=int, default=8000)
-    parser.add_argument('--predict-port', type=int, default=5000)
+    parser.add_argument('--model-path', type=str, default='/mlruns/1/models/m-8fdf8f8531774850aa0b02bc95e03cb3/artifacts')
+    parser.add_argument('--port', type=int, default=5880)
+    parser.add_argument('--predict-port', type=int, default=5881)
     return parser.parse_args()
-
 
 def main():
     args = parse_args()
+    
+    # Directly resolve the path provided in arguments
     model_path = Path(args.model_path).resolve()
+    
     if not model_path.exists():
         raise FileNotFoundError(f'Model path tidak ditemukan: {model_path}')
 

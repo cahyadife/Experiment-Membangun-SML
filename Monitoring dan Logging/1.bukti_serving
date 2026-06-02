@@ -1,14 +1,17 @@
-Proof of MLflow Model Serving
+Proof of MLflow Model Serving (port 5700)
 
-Tahapan serving model menggunakan MLflow dapat dilakukan dengan perintah:
+Serving model MLflow dijalankan pada port 5700 dengan perintah:
 
-mlflow models serve -m <model_uri> --port 5000
+python -m uvicorn --host 127.0.0.1 --port 5700 mlflow.pyfunc.scoring_server.app:app
 
-Model serving endpoint akan tersedia di: http://127.0.0.1:5000
+Model endpoint akan tersedia di: http://127.0.0.1:5700
 
-Alternatif: Menggunakan Docker image yang telah dibuat di tahap Workflow CI:
-docker run -p 5000:8080 cahyadica/eksperimen_sml:latest
+Contoh verifikasi:
 
-Port mapping Docker akan membuat model tersedia di: http://127.0.0.1:5000
+curl -I http://127.0.0.1:5700
+curl -X POST http://127.0.0.1:5700/invocations -H "Content-Type: application/json" -d "{\"dataframe_split\": {\"columns\": [\"Year\"], \"data\": [[2026]]}}"
 
-Status: Siap untuk serving (detailed screenshot dapat dilihat pada monitoring evidence)
+Bukti berjalan:
+- Monitoring dan Logging/serving_screenshot_5700.png
+
+Status: Model serving aktif pada port 5700 dengan bukti request dan response.

@@ -5,15 +5,16 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '8000:8000'
-      - '5000:5000'
+      - '5880:5880'
+      - '5881:5881'
     volumes:
-      - ../mlruns:/app/mlruns:ro
+      # Mount the mlruns folder directly to /mlruns inside the container
+      - ../Membangun_model/mlruns:/mlruns
 
   prometheus:
     image: prom/prometheus:latest
     ports:
-      - '9090:9090'
+      - '5800:5800'
     volumes:
       - ./2.prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - ./alert_rules.yml:/etc/prometheus/alert_rules.yml:ro
@@ -27,7 +28,7 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_SECURITY_ADMIN_USER=admin
     ports:
-      - '3000:3000'
+      - '5890:5890'
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboards:/var/lib/grafana/dashboards

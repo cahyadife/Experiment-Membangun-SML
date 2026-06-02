@@ -30,7 +30,7 @@ This file records the steps taken to reorganize and finalize the submission stru
   - `MLProject/` including `MLproject`, `conda.yaml`, and `modelling.py`
   - `docker_hub_link.txt`
 
-- Ensured `Monitoring dan Logging/` contains a placeholder `1.bukti_serving` and the file `7.Inference.py`.
+- Ensured `Monitoring dan Logging/` contains the actual serving evidence file `1.bukti_serving`, the proof image `serving_screenshot_5700.png`, and the file `7.Inference.py`.
 
 - Created the final submission archive `SMSML_Cahyadi.zip` containing only:
   - `Eksperimen_SML_Cahyadi.txt`
@@ -49,9 +49,9 @@ This file records the steps taken to reorganize and finalize the submission stru
 ## Remaining Tasks
 
 - **Kriteria 2 Screenshots**: Validate that `screenshoot_artifak.jpg` and `screenshoot_dashboard.jpg` properly show MLflow autolog artifacts and UI.
-- **Kriteria 4 Serving Evidence**: Add actual screenshot evidence showing `http://127.0.0.1:5000` or Docker output.
+- **Kriteria 4 Serving Evidence**: Add actual screenshot evidence showing `http://127.0.0.1:5700` or Docker output.
 - **Kriteria 4 Prometheus Evidence**: Ensure screenshots show all three metrics properly exposed.
-- **Kriteria 4 Grafana Dashboard**: Verify dashboard name is `dashboard-cahyadi_ca` in monitoring screenshots.
+- **Kriteria 4 Grafana Dashboard**: Verify dashboard name is `dashboard-cahyadi` in monitoring screenshots.
 - **Kriteria 4 Alerting**: Ensure alerting evidence folder contains both rules and notification screenshots.
 
 ## Notes for next agent

@@ -1,6 +1,6 @@
 apiVersion: 1
 providers:
-  - name: 'cahyadi_ca'
+  - name: 'dashboard-cahyadi'
     orgId: 1
     folder: ''
     type: file
