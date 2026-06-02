@@ -8,7 +8,8 @@ rule_files:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['localhost:5800']
+      # Ubah ke 9090 karena ini dibaca dari dalam container itu sendiri
+      - targets: ['localhost:9090'] 
 
   - job_name: 'model_exporter'
     metrics_path: '/metrics'
