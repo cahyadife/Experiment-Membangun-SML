@@ -7,3 +7,9 @@ Required metrics:
 - `ml_model_active_requests`
 
 Each screenshot should show Prometheus query results or the Prometheus expression browser.
+
+Current files:
+- `1.monitoring_request_count.png`
+- `2.monitoring_latency.png`
+- `3.monitoring_request_errors.png`
+- `4.monitoring_active_requests.png`

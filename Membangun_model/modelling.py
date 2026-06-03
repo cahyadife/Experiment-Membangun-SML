@@ -1,12 +1,18 @@
-import pandas as pd
+from pathlib import Path
+
 import mlflow
 import mlflow.sklearn
-from sklearn.model_selection import train_test_split
+import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATASET_PATH = SCRIPT_DIR / 'namadataset_preprocessing' / 'indonesia_gdp_preprocessed.csv'
 
 # 1. Load data
-df = pd.read_csv('indonesia_gdp_preprocessed.csv')
+df = pd.read_csv(DATASET_PATH)
 
 # 2. Persiapan Fitur (Gunakan Tahun untuk prediksi PDB)
 X = df[['Year']]
@@ -16,7 +22,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # 3. MLflow Tracking
 mlflow.set_experiment("Analisa_Ekonomi_Indonesia")
-mlflow.sklearn.autolog() # Mengaktifkan autologging
+mlflow.sklearn.autolog()  # Mengaktifkan autologging
 
 with mlflow.start_run(run_name="LinearRegression_Baseline"):
     model = LinearRegression()

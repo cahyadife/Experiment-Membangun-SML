@@ -33,7 +33,7 @@ curl -X POST http://127.0.0.1:5700/invocations -H "Content-Type: application/jso
 
 - Take a screenshot of the terminal showing `Uvicorn running on http://127.0.0.1:5700`.
 - Optionally, take a screenshot of the successful `curl` response showing the prediction.
-- Save screenshots to `Monitoring dan Logging/serving_screenshot_5700.png`.
+- Save screenshots to `Monitoring dan Logging/1.bukti_serving.png`.
 
 Notes and troubleshooting
 

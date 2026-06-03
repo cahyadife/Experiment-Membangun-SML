@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 COPY requirements.txt .
 RUN python -m pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-COPY 3.prometheus_exporter.py .
-
-ENTRYPOINT ["python", "3.prometheus_exporter.py", "--model-path", "../mlruns/1/models/m-8fdf8f8531774850aa0b02bc95e03cb3/artifacts", "--port", "8000", "--predict-port", "5000"]
 COPY . /app
-WORKDIR /app
+
+EXPOSE 5880 5881
+
+CMD ["python", "3.prometheus_exporter.py", "--port", "5880", "--predict-port", "5881"]

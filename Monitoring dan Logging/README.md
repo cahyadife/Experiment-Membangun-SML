@@ -4,7 +4,7 @@ Folder ini berisi konfigurasi dasar untuk serving model, Prometheus monitoring, 
 
 ## Isi folder
 
-- `1.bukti_serving` : bukti serving model MLflow pada port 5700
+- `1.bukti_serving.png` : bukti serving model MLflow pada port 5700
 - `2.prometheus.yml` : konfigurasi Prometheus
 - `3.prometheus_exporter.py` : exporter Python untuk expose metriks model
 - `4.bukti monitoring Prometheus/` : bukti monitoring Prometheus
@@ -62,7 +62,7 @@ Bukti Prometheus dan Grafana bisa ditaruh di folder:
 - `4.bukti monitoring Prometheus/`
 - `5.bukti monitoring Grafana/`
 - `6.bukti alerting Grafana/`
-- `Monitoring dan Logging/serving_screenshot_5700.png`
+- `Monitoring dan Logging/1.bukti_serving.png`
 
 Panduan bukti tambahan tersedia di `prometheus_grafana_evidence.md`.
 
