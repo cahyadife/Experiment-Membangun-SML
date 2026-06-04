@@ -31,7 +31,7 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
-      - GF_AUTH_DISABLE_LOGIN_FORM=true
+      - GF_AUTH_DISABLE_LOGIN_FORM=false
     ports:
       # Akses Grafana via localhost:5890, diteruskan ke port internal 3000
       - '5890:3000' 

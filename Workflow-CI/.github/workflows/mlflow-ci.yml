@@ -27,14 +27,14 @@ jobs:
         run: python -m pip install --upgrade pip mlflow==2.19.0 scikit-learn pandas matplotlib requests
 
       - name: Run MLflow Project
-        working-directory: Workflow-CI/MLProject
+        working-directory: MLProject
         run: mlflow run . --no-conda -P data_path=namadataset_preprocessing/indonesia_gdp_preprocessed.csv
 
       - name: Upload MLflow artefacts
         uses: actions/upload-artifact@v4
         with:
           name: mlflow-artefacts
-          path: Workflow-CI/MLProject/mlruns
+          path: MLProject/mlruns
 
   docker-build:
     needs: train-model
@@ -57,10 +57,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: mlflow-artefacts
-          path: Workflow-CI/MLProject/mlruns
+          path: MLProject/mlruns
 
       - name: Resolve Model URI
-        working-directory: Workflow-CI/MLProject
+        working-directory: MLProject
         run: |
           MODEL_PATH=$(python -c "import mlflow; mlflow.set_tracking_uri('file:mlruns'); print(mlflow.search_runs(experiment_names=['Analisa_Ekonomi_Indonesia']).iloc[0]['artifact_uri'] + '/model')")
           echo "MODEL_URI=$MODEL_PATH" >> $GITHUB_ENV

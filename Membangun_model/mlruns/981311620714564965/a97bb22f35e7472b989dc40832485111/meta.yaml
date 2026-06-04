@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/cahya/Downloads/Submission - Experiment Membangun SML/Membangun_model/mlruns/981311620714564965/a97bb22f35e7472b989dc40832485111/artifacts
+end_time: 1780579587568
+entry_point_name: ''
+experiment_id: '981311620714564965'
+lifecycle_stage: active
+run_id: a97bb22f35e7472b989dc40832485111
+run_name: RF_Hyperparameter_Tuning
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780579581816
+status: 3
+tags: []
+user_id: cahya

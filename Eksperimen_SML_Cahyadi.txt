@@ -17,8 +17,8 @@ Saya juga menambahkan contoh artefak MLflow di `Membangun_model/artifacts_exampl
 
 Kriteria 3 (Workflow CI):
 
-- Repository Workflow CI: https://github.com/cahyadica/Eksperimen_SML_Cahyadi
-- File catatan: `Workflow-CI.txt` dan `Workflow-CI/Workflow-CI.txt` berisi tautan dan keterangan.
+- Repository Workflow CI: https://github.com/cahyadica/chrica-project-Eksperimen_SML_Cahyadi
+- File catatan: `Workflow-CI.txt` berisi tautan dan keterangan.
 
 Kriteria 4 (Monitoring & Logging - Serving):
 
