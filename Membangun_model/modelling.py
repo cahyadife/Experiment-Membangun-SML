@@ -22,7 +22,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # 3. MLflow Tracking
 mlflow.set_experiment("Analisa_Ekonomi_Indonesia")
-mlflow.sklearn.autolog()  # Mengaktifkan autologging
+mlflow.sklearn.autolog(log_models=True)  # Mengaktifkan autologging dengan model logging
 
 with mlflow.start_run(run_name="LinearRegression_Baseline"):
     model = LinearRegression()

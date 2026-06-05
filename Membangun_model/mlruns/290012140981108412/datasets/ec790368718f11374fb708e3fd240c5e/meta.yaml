@@ -1,7 +1,0 @@
-digest: 0a54131b
-name: dataset
-profile: '{"num_rows": 12, "num_elements": 12}'
-schema: '{"mlflow_colspec": [{"type": "long", "name": "Year", "required": true}]}'
-source: '{"tags": {"mlflow.user": "cahya", "mlflow.source.name": "Membangun_model\\modelling.py",
-  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "6bf409dc002564ae5127033a7e7d33ff12f89050"}}'
-source_type: code

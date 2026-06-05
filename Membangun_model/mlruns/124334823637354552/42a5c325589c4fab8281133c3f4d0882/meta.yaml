@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/cahya/Downloads/Submission%20-%20Experiment%20Membangun%20SML/Membangun_model/mlruns/124334823637354552/42a5c325589c4fab8281133c3f4d0882/artifacts
+end_time: 1780624337618
+entry_point_name: ''
+experiment_id: '124334823637354552'
+lifecycle_stage: active
+run_id: 42a5c325589c4fab8281133c3f4d0882
+run_name: LinearRegression_Baseline
+run_uuid: 42a5c325589c4fab8281133c3f4d0882
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780624332718
+status: 3
+tags: []
+user_id: cahya

@@ -7,11 +7,11 @@ Dataset yang dihasilkan digunakan untuk tahap model training (Kriteria 2).
 Bukti Artefak (Kriteria 2):
 
 - Contoh artefak autolog MLflow tersedia di folder `Membangun_model/mlruns`.
-- Estimator HTML: `Membangun_model/mlruns/1/f0c5df018cfa4504a9fd4da37a1fa17e/artifacts/estimator.html`
+- Estimator HTML: `Membangun_model/mlruns/124334823637354552/42a5c325589c4fab8281133c3f4d0882/artifacts/estimator.html`
 - Model dan metadata:
-	- `Membangun_model/mlruns/1/models/m-8fdf8f8531774850aa0b02bc95e03cb3/artifacts/model.pkl`
-	- `Membangun_model/mlruns/1/models/m-8fdf8f8531774850aa0b02bc95e03cb3/artifacts/MLmodel`
-	- `Membangun_model/mlruns/1/models/m-8fdf8f8531774850aa0b02bc95e03cb3/artifacts/conda.yaml`
+	- `Membangun_model/mlruns/124334823637354552/42a5c325589c4fab8281133c3f4d0882/artifacts/model/model.pkl`
+	- `Membangun_model/mlruns/124334823637354552/42a5c325589c4fab8281133c3f4d0882/artifacts/model/MLmodel`
+	- `Membangun_model/mlruns/124334823637354552/42a5c325589c4fab8281133c3f4d0882/artifacts/model/conda.yaml`
 
 Saya juga menambahkan contoh artefak MLflow di `Membangun_model/artifacts_example/` untuk bukti pengumpulan.
 

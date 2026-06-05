@@ -8,4 +8,4 @@ entry_points:
       test_size: {type: float, default: 0.2}
       random_state: {type: int, default: 42}
       experiment_name: {type: str, default: "Analisa_Ekonomi_Indonesia"}
-    command: "python modelling.py --data_path {data_path} --test_size {test_size} --random_state {random_state} --experiment_name \"{experiment_name}\""
+    command: "python modelling.py --data_path {data_path} --test_size {test_size} --random_state {random_state} --experiment_name {experiment_name}"

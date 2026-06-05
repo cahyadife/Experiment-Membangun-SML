@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/cahya/Downloads/Submission - Experiment Membangun SML/Workflow-CI/MLProject/mlruns/2/models/m-2f952e31bf294c8bb87af4f7a7264f48/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-2f952e31bf294c8bb87af4f7a7264f48
+model_size_bytes: 580
+model_uuid: m-2f952e31bf294c8bb87af4f7a7264f48
+prompts: null
+run_id: c5453815185440dda53f183391cbd237
+utc_time_created: '2026-06-05 01:50:43.384745'

@@ -18,7 +18,7 @@ def train(data_path: str, test_size: float, random_state: int, experiment_name: 
     )
 
     mlflow.set_experiment(experiment_name)
-    mlflow.sklearn.autolog()
+    mlflow.sklearn.autolog(log_models=True)
 
     with mlflow.start_run(run_name='LinearRegression_Baseline'):
         model = LinearRegression()

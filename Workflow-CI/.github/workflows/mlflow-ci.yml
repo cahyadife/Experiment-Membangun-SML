@@ -28,7 +28,7 @@ jobs:
 
       - name: Run MLflow Project
         working-directory: MLProject
-        run: mlflow run . --no-conda -P data_path=namadataset_preprocessing/indonesia_gdp_preprocessed.csv
+        run: mlflow run . --env-manager local --experiment-name Analisa_Ekonomi_Indonesia -P data_path=namadataset_preprocessing/indonesia_gdp_preprocessed.csv
 
       - name: Upload MLflow artefacts
         uses: actions/upload-artifact@v4

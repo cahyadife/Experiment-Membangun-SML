@@ -1,0 +1,7 @@
+digest: 23dc6bc0
+name: dataset
+profile: '{"num_rows": 46, "num_elements": 46}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "Year", "required": true}]}'
+source: '{"tags": {"mlflow.user": "cahya", "mlflow.source.name": "modelling.py", "mlflow.source.type":
+  "LOCAL", "mlflow.source.git.commit": "344f65e5f8c814e890340e0b347fa6ee98fa7314"}}'
+source_type: code

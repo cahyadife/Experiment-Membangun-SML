@@ -24,6 +24,7 @@ if __name__ == '__main__':
         df = df[['Year', 'GDP_USD']]
 
     # Preprocessing
+    df = df.drop_duplicates()
     df = df.dropna().sort_values('Year').reset_index(drop=True)
     df['GDP_Growth_Rate'] = df['GDP_USD'].pct_change() * 100
     df['GDP_Growth_Rate'] = df['GDP_Growth_Rate'].fillna(0)
