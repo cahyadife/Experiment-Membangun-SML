@@ -1,15 +1,9 @@
 Repository URL (Kriteria 3 - Workflow CI):
-https://github.com/cahyadica/chrica-project-Eksperimen_SML_Cahyadi
+https://github.com/cahyadife/Experiment-Membangun-SML
 
 Deskripsi:
 Repository ini berisi MLflow Project dan GitHub Actions workflow untuk CI/CD.
 Struktur repository disesuaikan agar hanya berisi folder `.github`, `.workflow`, dan `MLProject`.
-
-Catatan Mengenai Kegagalan Run GitHub Actions:
-Saat alur kerja CI dijalankan secara otomatis setelah push, eksekusi gagal di sisi GitHub runner dengan pesan kesalahan:
-"The job was not started because your account is locked due to a billing issue."
-
-Pesan ini menunjukkan adanya pemblokiran akun di tingkat akun GitHub personal pengguna (cahyadica), bukan karena masalah kode atau struktur file CI. Semua konfigurasi yml di `.github/workflows/mlflow-ci.yml` sudah benar dan siap berjalan normal setelah status akun GitHub Anda dipulihkan.
 
 Docker Hub Image:
 https://hub.docker.com/r/cahyadica/eksperimen_sml
