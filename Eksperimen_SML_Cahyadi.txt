@@ -1,5 +1,5 @@
 Repository URL (Kriteria 1 - Preprocessing):
-https://github.com/cahyadica/Eksperimen_SML_Cahyadi
+https://github.com/cahyadife/Experiment-Membangun-SML
 
 Deskripsi: Repository ini berisi notebook dan script preprocessing untuk memproses dataset GDP Indonesia.
 Dataset yang dihasilkan digunakan untuk tahap model training (Kriteria 2).
